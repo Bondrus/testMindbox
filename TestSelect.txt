@@ -1,0 +1,4 @@
+SELECT DISTINCT product.name, category.name
+FROM category RIGHT JOIN 
+(product LEFT JOIN pc ON product.id = pc.product_id) 
+    ON category.id = pc.category_id;
